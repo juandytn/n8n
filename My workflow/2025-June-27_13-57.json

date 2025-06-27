@@ -1,0 +1,120 @@
+{
+  "createdAt": "2025-06-27T17:31:40.882Z",
+  "updatedAt": "2025-06-27T17:55:42.000Z",
+  "id": "z5fCiaDnOvfalRKg",
+  "name": "My workflow",
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -420,
+        -100
+      ],
+      "id": "a95e30dd-e1f9-47b3-8db2-b8bf61e112c9",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "filters": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        -100
+      ],
+      "id": "17b50651-570d-489f-8f68-a663cc85046d",
+      "name": "Get many workflows",
+      "credentials": {
+        "n8nApi": {
+          "id": "KTVAE25xlfTMol2l",
+          "name": "n8n account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get many workflows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {},
+  "versionId": "7891ce9a-88b0-4ce1-878f-3845a9e3996e",
+  "triggerCount": 0,
+  "shared": [
+    {
+      "createdAt": "2025-06-27T17:31:40.903Z",
+      "updatedAt": "2025-06-27T17:31:40.903Z",
+      "role": "workflow:owner",
+      "workflowId": "z5fCiaDnOvfalRKg",
+      "projectId": "sfKImwuz1tIimLjt",
+      "project": {
+        "createdAt": "2025-06-27T17:23:25.519Z",
+        "updatedAt": "2025-06-27T17:25:54.145Z",
+        "id": "sfKImwuz1tIimLjt",
+        "name": "juan  Tene <cukisloca2@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "projectRelations": [
+          {
+            "createdAt": "2025-06-27T17:23:25.519Z",
+            "updatedAt": "2025-06-27T17:23:25.519Z",
+            "role": "project:personalOwner",
+            "userId": "9a7b3202-6580-4f69-a773-09d12ddf8255",
+            "projectId": "sfKImwuz1tIimLjt",
+            "user": {
+              "createdAt": "2025-06-27T17:23:23.229Z",
+              "updatedAt": "2025-06-27T17:25:59.000Z",
+              "id": "9a7b3202-6580-4f69-a773-09d12ddf8255",
+              "email": "cukisloca2@gmail.com",
+              "firstName": "juan ",
+              "lastName": "Tene",
+              "personalizationAnswers": {
+                "version": "v4",
+                "personalization_survey_submitted_at": "2025-06-27T17:25:34.931Z",
+                "personalization_survey_n8n_version": "1.99.1"
+              },
+              "settings": {
+                "userActivated": false
+              },
+              "role": "global:owner",
+              "disabled": false,
+              "mfaEnabled": false,
+              "isPending": false
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tags": []
+}
